@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+}
+
+.Search {
+  position: sticky;
+  top: -1px;
+  z-index: 22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 61px;
+  margin-bottom: 32px;
+  font-family: Roboto, sans-serif;
+  width: 100%;
+}
+
+.Search__form {
+  position: absolute;
+  z-index: 22;
+  top: 9px;
+  width: calc(100% - 32px);
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  border-radius: 24px;
+  border: 2px solid #242424;
+  background: #fff;
+}
+
+.SearchIcon--google {
+  background-image: url('./google-5a54b034.svg');
+  background-size: 32px;
+  width: 34px;
+  height: 32px;
+  position: absolute;
+  top: 6px;
+  left: 2px;
+}
+
+.Search__input {
+  font-family: Roboto, sans-serif;
+  width: 100%;
+  height: 44px;
+  padding: 0 40px !important;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  color: #242424;
+}
+
+input[type="text" i] {
+  writing-mode: horizontal-tb !important;
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+
