@@ -1,23 +1,36 @@
 import './App.css';
+import React, { useState } from 'react';
+import { FaGooglePlusG } from "react-icons/fa";
 
 function App() {
-  // window.open(`http://www.google.com/search?q=${search}`, '_blank')
+  const [searchTerm, setSearchTerm] = useState('');
 
   const searchSubmit = (event) => {
-    window.open(`http://www.google.com/search?q=${event}`, '_blank')
-  }
+    event.preventDefault(); 
+    if (searchTerm) {
+      window.open(`http://www.google.com/search?q=${searchTerm}`, '_blank');
+    }
+  };
 
   return (
     <div className="App">
-      <div class="Search">
-        <form class="Search__form">
-          <div class="SearchIcon SearchIcon--google"></div>
-          <input class="Search__input" type="text" placeholder="Search with Google" 
-            onKeyPress={event => {
+      <div className="Search">
+        <form className="Search-form" onSubmit={searchSubmit}>
+          <FaGooglePlusG className="Search-icon" />
+          <input
+            className="Search-input"
+            type="text"
+            placeholder="Search with Google Plus"
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            onKeyPress={(event) => {
               if (event.key === 'Enter') {
-                console.log(this.search())
+                searchSubmit(event);
               }
-            }} /></form></div>
+            }}
+          />
+        </form>
+      </div>
     </div>
   );
 }

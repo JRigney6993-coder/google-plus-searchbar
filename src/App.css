@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding-top: 40vh;
 }
 
 .Search {
@@ -15,7 +16,7 @@
   width: 100%;
 }
 
-.Search__form {
+.Search-form {
   position: absolute;
   z-index: 22;
   top: 9px;
@@ -25,30 +26,30 @@
   flex-direction: column;
   outline: none;
   border-radius: 24px;
-  border: 2px solid #242424;
-  background: #fff;
+  border: 2px solid #282828;
+  background: #121212;
 }
 
-.SearchIcon--google {
-  background-image: url('./google-5a54b034.svg');
+.Search-icon {
   background-size: 32px;
   width: 34px;
   height: 32px;
   position: absolute;
   top: 6px;
-  left: 2px;
+  left: 7px;
+  color: #480f7d;
 }
 
-.Search__input {
+.Search-input {
   font-family: Roboto, sans-serif;
   width: 100%;
   height: 44px;
-  padding: 0 40px !important;
+  padding: 0 45px !important;
   font-size: 16px;
   border: none;
   outline: none;
   background: none;
-  color: #242424;
+  color: #747474;
 }
 
 input[type="text" i] {
@@ -56,4 +57,3 @@ input[type="text" i] {
   padding-block: 1px;
   padding-inline: 2px;
 }
-
